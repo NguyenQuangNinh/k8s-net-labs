@@ -65,7 +65,7 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-    DEBIAN_FRONTEND=noninteractive apt-get install -y aptitude python2.7 python-setuptools apt-transport-https ca-certificates curl wget time software-properties-common python3-pip virtualenv python3-setuptools gnupg gnupg-agent tcpdump ngrep tshark silversearcher-ag-el bpfcc-tools ipython fish fzf vim dnsutils jq golang-go git libpcap0.8 libpcap0.8-dev
+    DEBIAN_FRONTEND=noninteractive apt-get install -y aptitude python2.7 python-setuptools apt-transport-https ca-certificates curl wget time software-properties-common python3-pip virtualenv python3-setuptools gnupg gnupg-agent tcpdump ngrep tshark silversearcher-ag-el bpfcc-tools ipython fish fzf vim dnsutils jq golang-go git libpcap0.8 libpcap0.8-dev bridge-utils
     curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
     apt-get update
